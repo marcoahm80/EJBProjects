@@ -1,0 +1,107 @@
+﻿@model EJBMes.Models.ProdReport
+
+@{
+    ViewData["Title"] = "Details Labor Activity";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProdReport</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AssemblyNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AssemblyNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpSeq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpSeq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResourceGroup)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResourceGroup)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResourceId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResourceId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReferenceNotes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReferenceNotes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LaborQty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LaborQty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ActiveLabor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ActiveLabor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Procesed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Procesed)
+        </dd>
+    </dl>
+</div>
+<div>
+    <form >
+        <input type="hidden" asp-for="Id" />
+    
+    @if (!Model.ActiveLabor)
+    {
+        @if (!Model.Procesed)
+        {
+            @* <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> *@
+            <input type="submit" value="Edit" class="btn btn-primary" asp-action="Edit" />
+        }
+    } else
+    {
+        @* <a asp-action="EndActivity" asp-route-id="@Model.Id">End Activity</a> *@
+            <input type="submit" value="Report Quantity" class="btn btn-dark" asp-action="ReportQty" />
+            <input type="submit" value="End Activity" class="btn btn-primary" asp-action="EndActivity" />
+    }
+    <input type="submit" value="Back to List" class="btn btn-secondary" asp-action="BackToList" />
+    @* <a asp-action="Index">Back to List</a> *@
+    </form>
+</div>

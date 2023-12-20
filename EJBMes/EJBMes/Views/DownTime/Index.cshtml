@@ -1,0 +1,128 @@
+﻿@model IEnumerable<EJBMes.Models.DowntimeReport>
+
+@{
+    ViewData["Title"] = "DownTime Report";
+}
+
+<h1>DownTime Report</h1>
+
+<p>
+    @* <a asp-action="Create">Create New</a> *@
+    <form>
+        <input type="submit" value="New Downtime" class="btn btn-primary" asp-action="Create" />
+    </form>
+</p>
+<table class="table">
+    <thead class="Head-TR">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssemblyNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpSeq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownTimeStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownTimeEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReasonCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveDowntime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procesed)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssemblyNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpSeq)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DownTimeStartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DownTimeEndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResourceGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResourceId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceNotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReasonCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActiveDowntime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Procesed)
+                </td>
+                <td>
+                    <form method="get">
+                        <input type="hidden" id="Id" name="Id" value="@item.Id" />
+                    @if (!item.ActiveDowntime)
+                    {
+                        @if (item.Procesed)
+                        {
+                            @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> *@
+                                <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                        }
+                        else
+                        {
+                            @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                                <input type="submit" value="Edit" class="btn btn-outline-secondary" asp-action="Edit" />
+                                <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                                <input type="submit" value="Delete" class="btn btn-outline-danger" asp-action="Delete" />
+                        }
+                    }
+                    else
+                    {
+                        @* <a asp-action="EndDowntime" asp-route-id="@item.Id">End DownTime</a> *@
+                            <input type="submit" value="End DownTime" class="btn btn-outline-success" asp-action="EndDowntime" />
+                            <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                    }
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Start Session</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="body-Login">
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Start Session
+                    </div>
+                    <div class="card-body">
+                        <form asp-controler="Start" asp-action="StartSession" method="post">
+                            <input class="form-control mb-3" type="text" placeholder="User Id" required name="userID" />
+                            <input class="form-control mb-3" type="password" placeholder="Password" required name="Pwd" />
+                            <div class="d-grid gap-2 mb-3">
+                                <button class="btn-primary" type="submit">Start Session</button>
+                            </div>
+                            @if (ViewData["message"] != null)
+                            {
+                                <div class="form-group">
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewData["message"]
+                                    </div>
+                                </div>
+                            }
+                            You do not have an account?<a href="@Url.Action("Register","Start")" class="ahref-button">Sign up!</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

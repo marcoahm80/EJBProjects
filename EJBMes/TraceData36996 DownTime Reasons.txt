@@ -1,0 +1,52 @@
+﻿<tracePacket>
+  <businessObject>Ice.Proxy.BO.NamedSearchImpl</businessObject>
+  <methodName>GetRows</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>Ice.BO.NamedSearchDataSet</returnType>
+  <localTime>12/15/2023 13:29:25:6046880 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>5d628159-dcec-4b8a-99cd-52de2e56f5c5</correlationId>
+  <executionTime total="164" roundTrip="163" channel="0" bpm="0" bpmDataForm="0" other="1" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="whereClauseNamedSearch" type="System.String"><![CDATA[ProductID = 'EP' AND SearchForm = 'Indirect Labor Search' AND CalledFrom = 'Erp.UI.IndirectEntry.dll' AND UserId = 'mahernandez']]></parameter>
+    <parameter name="whereClauseControlSetting" type="System.String"><![CDATA[]]></parameter>
+    <parameter name="whereClauseWhereClause" type="System.String"><![CDATA[]]></parameter>
+    <parameter name="pageSize" type="System.Int32"><![CDATA[0]]></parameter>
+    <parameter name="absolutePage" type="System.Int32"><![CDATA[0]]></parameter>
+  </parameters>
+</tracePacket>
+
+<tracePacket>
+  <businessObject>Ice.Proxy.BO.QuickSearchImpl</businessObject>
+  <methodName>GetBaseDefault</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>System.Void</returnType>
+  <localTime>12/15/2023 13:29:25:7724955 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>e8a5aa30-93e1-49a2-b8b0-ab7daa4df1fb</correlationId>
+  <executionTime total="168" roundTrip="166" channel="0" bpm="0" bpmDataForm="0" other="2" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="likeTableAndField" type="System.String"><![CDATA[Indirect.IndirectCode]]></parameter>
+    <parameter name="callFrom" type="System.String"><![CDATA[Erp.UI.IndirectEntry]]></parameter>
+  </parameters>
+</tracePacket>
+
+<tracePacket>
+  <businessObject>Erp.Proxy.BO.IndirectImpl</businessObject>
+  <methodName>GetRows</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>Erp.BO.IndirectDataSet</returnType>
+  <localTime>12/15/2023 13:29:26:9300018 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>6fbf806d-d02a-4556-9552-2d097e701dc2</correlationId>
+  <executionTime total="184" roundTrip="183" channel="0" bpm="0" bpmDataForm="0" other="1" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="whereClauseIndirect" type="System.String"><![CDATA[ BY Description]]></parameter>
+    <parameter name="pageSize" type="System.Int32"><![CDATA[100]]></parameter>
+    <parameter name="absolutePage" type="System.Int32"><![CDATA[0]]></parameter>
+  </parameters>
+</tracePacket>
+

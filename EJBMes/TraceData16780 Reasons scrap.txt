@@ -1,0 +1,17 @@
+﻿<tracePacket>
+  <businessObject>Erp.Proxy.BO.ReasonImpl</businessObject>
+  <methodName>GetRows</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticLive/</appServerUri>
+  <returnType>Erp.BO.ReasonDataSet</returnType>
+  <localTime>12/15/2023 13:16:18:5456458 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>91d08b87-1652-485a-93f4-1bbdc6be509b</correlationId>
+  <executionTime total="213" roundTrip="199" channel="0" bpm="0" bpmDataForm="0" other="14" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="whereClauseReason" type="System.String"><![CDATA[ReasonType='S' BY ReasonCode]]></parameter>
+    <parameter name="whereClauseEntityGLC" type="System.String"><![CDATA[]]></parameter>
+    <parameter name="pageSize" type="System.Int32"><![CDATA[100]]></parameter>
+    <parameter name="absolutePage" type="System.Int32"><![CDATA[0]]></parameter>
+  </parameters>
+</tracePacket>

@@ -1,0 +1,680 @@
+﻿<tracePacket>
+  <businessObject>Erp.Proxy.BO.JobEntryImpl</businessObject>
+  <methodName>GetList</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>Erp.BO.JobHeadListDataSet</returnType>
+  <localTime>12/8/2023 13:09:02:7149111 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>0a9f7ce9-12ca-4ae6-86df-395a021357f1</correlationId>
+  <executionTime total="583" roundTrip="573" channel="0" bpm="0" bpmDataForm="0" other="10" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="whereClause" type="System.String"><![CDATA[(JobReleased = true AND Plant = 'ANG') AND JobNum >= '' AND JobType = 'MFG' AND Jobclosed = False and  JobComplete = false and JobReleased = True and JobFirm = True BY JobNum]]></parameter>
+    <parameter name="pageSize" type="System.Int32"><![CDATA[100]]></parameter>
+    <parameter name="absolutePage" type="System.Int32"><![CDATA[0]]></parameter>
+  </parameters>
+</tracePacket>
+
+<tracePacket>
+  <businessObject>Ice.Proxy.Lib.BOReaderImpl</businessObject>
+  <methodName>GetList</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>System.Data.DataSet</returnType>
+  <localTime>12/8/2023 13:09:16:9888444 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>ddfd39e7-4220-47c4-9a19-dc556dce342f</correlationId>
+  <executionTime total="219" roundTrip="219" channel="0" bpm="0" bpmDataForm="0" other="0" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="serviceNamespace" type="System.String"><![CDATA[Erp:BO:JobAsmSearch]]></parameter>
+    <parameter name="whereClause" type="System.String"><![CDATA[(JobNum = 'AF587813')]]></parameter>
+    <parameter name="columnList" type="System.String"><![CDATA[AssemblySeq,PartNum,Description]]></parameter>
+  </parameters>
+</tracePacket>
+
+<tracePacket>
+  <businessObject>Ice.Proxy.Lib.BOReaderImpl</businessObject>
+  <methodName>GetList</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>System.Data.DataSet</returnType>
+  <localTime>12/8/2023 13:09:13:4897431 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>0aeca781-826e-425b-8ce6-af8b7884d427</correlationId>
+  <executionTime total="295" roundTrip="294" channel="0" bpm="0" bpmDataForm="0" other="1" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="serviceNamespace" type="System.String"><![CDATA[Erp:BO:JobOperSearch]]></parameter>
+    <parameter name="whereClause" type="System.String"><![CDATA[((JobNum = 'AF587813') AND (AssemblySeq = 0))]]></parameter>
+    <parameter name="columnList" type="System.String"><![CDATA[SubContract,LaborEntryMethod,OprSeq,OpCode,OpCodeOpDesc]]></parameter>
+  </parameters>
+</tracePacket>
+
+
+<tracePacket>
+  <businessObject>Erp.Proxy.BO.LaborImpl</businessObject>
+  <methodName>DefaultJobNum</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>System.Void</returnType>
+  <localTime>12/8/2023 13:09:11:4619660 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>7ca50b41-64ec-4c2a-936f-932f45af9f1a</correlationId>
+  <executionTime total="367" roundTrip="364" channel="0" bpm="0" bpmDataForm="0" other="3" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="ds" type="Erp.BO.LaborDataSet">
+      <LaborDataSet xmlns="http://www.epicor.com/Ice/300/BO/Labor/Labor" />
+    </parameter>
+    <parameter name="jobNum" type="System.String"><![CDATA[AF587813]]></parameter>
+  </parameters>
+  <paramDataSetChanges>
+    <paramDataSet name="ds" useDataSetNbr="0">
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Company"><![CDATA[TBSPG]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmployeeNum"><![CDATA[MESUSER]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborHedSeq"><![CDATA[177698]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborDtlSeq"><![CDATA[1506597]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborType"><![CDATA[P]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborTypePseudo"><![CDATA[P]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReWork"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReworkReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobNum"><![CDATA[AF587813]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCDept"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceGrpID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SetupPctComplete"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Complete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IndirectCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborNote"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ExpenseCode"><![CDATA[1]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborCollection"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AppliedToSchedule"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockInMInute"><![CDATA[36873488]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockOutMinute"><![CDATA[36874928]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockInDate"><![CDATA[12/8/2023 12:00:00 AM]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockinTime"><![CDATA[14.13]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockOutTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActiveTrans"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OverRidePayRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborRate"><![CDATA[13.0000]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspClockInTime"><![CDATA[14:08]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspClockOutTime"><![CDATA[00:00]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EarnedHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AddedOper"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayrollDate"><![CDATA[12/8/2023 12:00:00 AM]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PostedToGL"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalYear"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalPeriod"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JournalNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="GLTrans"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JournalCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="InspectionPending"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallLine"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ServNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ServCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WipPosted"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrpRsnCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ParentLaborDtlSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborEntryMethod"><![CDATA[T]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalYearSuffix"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalCalendarID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BFLaborReq"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ABTUID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjectID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeTypCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBInvNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PMUID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TaskSetID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClaimRef"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="QuickEntryCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeStatus"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreatedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreateTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChangedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChangeTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActiveTaskID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LastTaskID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreatedViaTEWeekView"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CurrentWFStageID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WFGroupID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WFComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalRequired"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SubmittedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBRateFrom"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBCurrencyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBHours"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DocPBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt1PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt2PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt3PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DocPBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt1PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt2PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt3PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Shift"><![CDATA[1]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DtailID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjProcessed"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AsOfSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFInputFiles"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFNumberOfPages"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchWasSaved"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AssignToBatch"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchRequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchPrint"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchLaborHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchPctOfTotHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchTotalExpectedHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFOpCompleted"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SysRevID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SysRowID"><![CDATA[00000000-0000-0000-0000-000000000000]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Downtime"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefJobNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefAssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Imported"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeAutoSubmit"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchMode"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BillServiceRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMPayHours"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EpicorFSA"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AllowDirLbr"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalPhaseDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalPhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalProjectDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalProjectID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprvrHasOpenTask"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BaseCurrCodeDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenCost"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CapabilityDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CapabilityID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChargeRateSRC"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChgRateCurrDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CompleteFlag"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ContractCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ContractNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisLaborType"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisplayJob"><![CDATA[AF587813]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisPrjRoleCd"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisTimeTypCd"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DowntimeTotal"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspChangeTime"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspCreateTime"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspTotHours"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EfficiencyPercentage"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmployeeName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableCopy"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableDiscrepQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableInspection"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableLaborQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableNextOprSeq"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnablePrintTagsList"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRecall"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRecallAprv"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableResourceGrpID"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableScrapQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableSN"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableSubmit"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EndActivity"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnteredOnCurPlant"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAAction"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSACallCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAContractCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAContractNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEmpID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEquipmentInstallID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEquipmentPartNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAServiceOrderNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAServiceOrderResourceNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAWarrantyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="GLTranAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasAccessToRow"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasComments"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HH"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IntExternalKey"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ISFixHourAndQtyOnly"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCSystReworkReasons"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCSystScrapReasons"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobOperComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobType"><![CDATA[Manufacture]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobTypeCode"><![CDATA[MFG]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborCost"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrDay"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrMonth"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrWeek"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MES"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MultipleEmployeesText"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewDifDateFlag"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewPrjRoleCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewRoleCdDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextAssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextOperDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextResourceDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NonConfProcessed"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NotSubmitted"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OkToChangeResourceGrpID"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PartDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PartNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBAllowModify"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PendingApprovalBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseJobNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrintNCTag"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrjUsedTran"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProdDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjPhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdDisplayAll"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SentFromMES"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="StartActivity"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeDisableDelete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeDisableUpdate"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TreeNodeImageName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="UnapprovedFirstArt"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WarrantyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WeekDisplayText"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PCID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnablePCID"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OutputBin"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OutputWarehouse"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableLot"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LotNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrintPCIDContents"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasAttachments"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AttrClassID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisableRecallAndDelete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdList"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RowSelected"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AppointmentTitle"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TemplateID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NonConfPCID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WIPTransaction"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TrackInventoryByRevision"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BitFlag"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrpRsnDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicLastName"><![CDATA[User]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicFirstName"><![CDATA[MES]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicName"><![CDATA[MES User]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ExpenseCodeDescription"><![CDATA[Direct Labor]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMIntregationHCMEnabled"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMStatusStatus"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IndirectDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCDeptDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobAsmblPartNum"><![CDATA[6162TRT]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobAsmblDescription"><![CDATA[TYDEN BALL SEAL, TIN STRAP, RED TOP CAP, TIN BOTTOM CAP]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MachineDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpCodeOpDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpDescOpDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodType"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodSummarizePerCustomer"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseIDDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjectDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceGrpDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReWorkReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdRoleDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ShiftDescription"><![CDATA[A]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeTypCdDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RowMod"><![CDATA[A]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Number05"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Number06"><![CDATA[0]]></changedValue>
+    </paramDataSet>
+  </paramDataSetChanges>
+</tracePacket>
+
+<tracePacket>
+  <businessObject>Erp.Proxy.BO.LaborImpl</businessObject>
+  <methodName>LaborRateCalc</methodName>
+  <appServerUri>https://erp.tydenbrooks.com/KineticPilot/</appServerUri>
+  <returnType>System.Void</returnType>
+  <localTime>12/8/2023 13:09:11:8342251 PM</localTime>
+  <threadID>1</threadID>
+  <correlationId>7d7cfe9b-6443-4bb7-88ae-91e776366599</correlationId>
+  <executionTime total="203" roundTrip="200" channel="0" bpm="0" bpmDataForm="0" other="3" />
+  <retries>0</retries>
+  <parameters>
+    <parameter name="ds" type="Erp.BO.LaborDataSet">
+      <LaborDataSet xmlns="http://www.epicor.com/Ice/300/BO/Labor/Labor" />
+    </parameter>
+  </parameters>
+  <paramDataSetChanges>
+    <paramDataSet name="ds" useDataSetNbr="0">
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Company"><![CDATA[TBSPG]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmployeeNum"><![CDATA[MESUSER]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborHedSeq"><![CDATA[177698]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborDtlSeq"><![CDATA[1506597]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborType"><![CDATA[P]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborTypePseudo"><![CDATA[P]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReWork"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReworkReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobNum"><![CDATA[AF587813]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCDept"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceGrpID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SetupPctComplete"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Complete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IndirectCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborNote"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ExpenseCode"><![CDATA[1]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborCollection"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AppliedToSchedule"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockInMInute"><![CDATA[36873488]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockOutMinute"><![CDATA[36874928]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockInDate"><![CDATA[12/8/2023 12:00:00 AM]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockinTime"><![CDATA[14.13]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClockOutTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActiveTrans"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OverRidePayRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborRate"><![CDATA[13.0000]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspClockInTime"><![CDATA[14:08]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspClockOutTime"><![CDATA[00:00]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EarnedHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AddedOper"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayrollDate"><![CDATA[12/8/2023 12:00:00 AM]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PostedToGL"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalYear"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalPeriod"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JournalNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="GLTrans"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JournalCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="InspectionPending"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallLine"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ServNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ServCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResReasonCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WipPosted"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrpRsnCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ParentLaborDtlSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborEntryMethod"><![CDATA[T]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalYearSuffix"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FiscalCalendarID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BFLaborReq"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ABTUID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjectID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeTypCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBInvNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PMUID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TaskSetID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ClaimRef"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="QuickEntryCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeStatus"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreatedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreateTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChangedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChangeTime"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActiveTaskID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LastTaskID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CreatedViaTEWeekView"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CurrentWFStageID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WFGroupID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WFComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalRequired"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SubmittedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBRateFrom"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBCurrencyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBHours"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DocPBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt1PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt2PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt3PBChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DocPBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt1PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt2PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Rpt3PBChargeAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Shift"><![CDATA[1]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ActID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DtailID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjProcessed"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AsOfSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFInputFiles"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFNumberOfPages"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchWasSaved"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AssignToBatch"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchRequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchPrint"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchLaborHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchPctOfTotHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchQty"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchTotalExpectedHrs"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JDFOpCompleted"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SysRevID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SysRowID"><![CDATA[00000000-0000-0000-0000-000000000000]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Downtime"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefJobNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefAssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RefOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Imported"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeAutoSubmit"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BatchMode"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BillServiceRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMPayHours"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EpicorFSA"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AllowDirLbr"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalPhaseDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalPhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalProjectDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovalProjectID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprovedBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ApprvrHasOpenTask"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BaseCurrCodeDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BurdenCost"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CallCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CapabilityDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CapabilityID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChargeRate"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChargeRateSRC"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ChgRateCurrDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="CompleteFlag"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ContractCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ContractNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisLaborType"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisplayJob"><![CDATA[AF587813]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisPrjRoleCd"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisTimeTypCd"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DowntimeTotal"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspChangeTime"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspCreateTime"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DspTotHours"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EfficiencyPercentage"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmployeeName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableCopy"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableDiscrepQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableInspection"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableLaborQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableNextOprSeq"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnablePrintTagsList"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRecall"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRecallAprv"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableRequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableResourceGrpID"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableScrapQty"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableSN"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableSubmit"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EndActivity"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnteredOnCurPlant"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAAction"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSACallCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAContractCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAContractNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEmpID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEquipmentInstallID"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAEquipmentPartNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAServiceOrderNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAServiceOrderResourceNum"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSAWarrantyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="FSComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="GLTranAmt"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasAccessToRow"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasComments"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HH"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IntExternalKey"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ISFixHourAndQtyOnly"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCSystReworkReasons"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCSystScrapReasons"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobOperComplete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobType"><![CDATA[Manufacture]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobTypeCode"><![CDATA[MFG]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborCost"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrDay"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrMonth"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LbrWeek"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MES"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MultipleEmployeesText"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewDifDateFlag"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewPrjRoleCd"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NewRoleCdDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextAssemblySeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextOperDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NextResourceDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NonConfProcessed"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NotSubmitted"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OkToChangeResourceGrpID"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PartDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PartNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PBAllowModify"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PendingApprovalBy"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseJobNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseOprSeq"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrintNCTag"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrjUsedTran"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProdDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjPhaseID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RequestMove"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdDisplayAll"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapUOM"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="SentFromMES"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="StartActivity"><![CDATA[True]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeDisableDelete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeDisableUpdate"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TreeNodeImageName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="UnapprovedFirstArt"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WarrantyCode"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WeekDisplayText"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PCID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnablePCID"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OutputBin"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OutputWarehouse"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EnableLot"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LotNum"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PrintPCIDContents"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HasAttachments"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AttrClassID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborAttributeSetShortDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DisableRecallAndDelete"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdList"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RowSelected"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="AppointmentTitle"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TemplateID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="NonConfPCID"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="WIPTransaction"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrepRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="LaborRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapRevision"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TrackInventoryByRevision"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="BitFlag"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="DiscrpRsnDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicLastName"><![CDATA[User]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicFirstName"><![CDATA[MES]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="EmpBasicName"><![CDATA[MES User]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ExpenseCodeDescription"><![CDATA[Direct Labor]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMIntregationHCMEnabled"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="HCMStatusStatus"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="IndirectDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JCDeptDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobAsmblPartNum"><![CDATA[6162TRT]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="JobAsmblDescription"><![CDATA[TYDEN BALL SEAL, TIN STRAP, RED TOP CAP, TIN BOTTOM CAP]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="MachineDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpCodeOpDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="OpDescOpDesc"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodType"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodSummarizePerCustomer"><![CDATA[False]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PayMethodName"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="PhaseIDDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ProjectDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResourceGrpDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ResReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ReWorkReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RoleCdRoleDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ScrapReasonDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="ShiftDescription"><![CDATA[A]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="TimeTypCdDescription"><![CDATA[]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="RowMod"><![CDATA[A]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Number05"><![CDATA[0]]></changedValue>
+      <changedValue tableName="LaborDtl" rowState="Added" rowNum="0" colName="Number06"><![CDATA[0]]></changedValue>
+    </paramDataSet>
+  </paramDataSetChanges>
+</tracePacket>
+
+

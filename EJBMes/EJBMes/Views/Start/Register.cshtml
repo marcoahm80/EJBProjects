@@ -1,0 +1,52 @@
+﻿@model EJBMes.Models.UserMes;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="body-Login">
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Sign up
+                    </div>
+                    <div class="card-body">
+                        <form asp-controler="Start" asp-action="Register" method="post">
+                            <input class="form-control mb-3" type="text" placeholder="User Id" required asp-for="UserId" />
+                            <input class="form-control mb-3" type="text" placeholder="User Name" required asp-for="UserName" />
+                            <input class="form-control mb-3" type="password" placeholder="Password" asp-for="Password" required />
+                            <input class="form-control mb-3" type="text" placeholder="Employee Id" asp-for="EmployeeId" required />
+                            <input class="form-control mb-3" type="text" placeholder="Company" asp-for="Company" required />
+                            <input class="form-control mb-3" type="text" placeholder="Site" asp-for="Site" required />
+                            <div class="d-grid gap-2 mb-3">
+                                <button class="btn-primary" type="submit">Sign up</button>
+                            </div>
+                            @if (ViewData["message"] != null)
+                            {
+                                <div class="form-group">
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewData["message"]
+                                    </div>
+                                </div>
+                            }
+                            Do you already have an account?<a href="@Url.Action("StartSession","Start")" class="ahref-button">Start Session</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

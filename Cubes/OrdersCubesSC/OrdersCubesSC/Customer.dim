@@ -1,0 +1,852 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="56cda940-aeb6-4fec-bb19-55925835f046" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer DW</ID>
+  <Name>Customer</Name>
+  <CreatedTimestamp>2022-03-03T17:53:43.473333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2022-03-03T17:53:43.473333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6727" scrolltop="-12965" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="17092" y="30930" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerDW" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_CustomerDW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-6727</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-12965</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-07-20T21:26:31.6Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e9e4a299-dc21-47a0-898e-c06c569e2322">
+    <DataSourceViewID>EpicorDataWarehouseView</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="25d4975f-112f-4e52-89aa-2eaca1bb4c0f">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission dwd:design-time-name="285b53e0-ab0d-4362-8299-46c73ffd3a36">
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.503333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.503333Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="930321c5-0840-42df-9358-34ed78a88fd7">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[Andrea Johnson - RSM], [Customer DW].[Customer Sales Rep].&amp;[Toni Huddleston]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="b22dca0e-3fae-491d-be57-1029385561b9">
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.52Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="366a296b-e008-46ab-abfd-3a7620e87b78">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="5c2829dd-9246-4d72-9d81-ebfb9434a895">
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.533333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.533333Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="8bb6425b-e6ba-4ebf-bfb4-cf2ae6b29b28">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[Chris Nelson - RSM]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="0e818d08-8fc4-4561-a847-db0e3f73902b">
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.55Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.55Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="9c18f453-5211-42a1-8907-7da49b50351b">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <DeniedSet>{}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="0bf5015e-28d6-4689-804d-93e9231d1cde">
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.566667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.566667Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="f9f95fb0-fb53-4a59-b835-7c48d98f2b68">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="8cd28497-bce2-4dfa-8259-18ffebe3755c">
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.596667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.596667Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="f1bff341-e42d-4f7b-824e-3838c8aa1272">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="6e18f704-6b03-4e58-9d31-04d998c19457">
+      <ID>DimensionPermission 6</ID>
+      <Name>DimensionPermission 6</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.613333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.613333Z</LastSchemaUpdate>
+      <RoleID>Role 8</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="bce1efef-d495-4334-807e-c459d16bb3d9">
+          <AttributeID>Bill To Country</AttributeID>
+          <DeniedSet>{}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="f783e0ed-e48b-444d-b509-b3776655a1e8">
+          <AttributeID>Cust Type</AttributeID>
+          <DeniedSet>{}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="d0099d22-c175-43c3-a2c9-11522db70d55">
+      <ID>DimensionPermission 7</ID>
+      <Name>DimensionPermission 7</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.63Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.63Z</LastSchemaUpdate>
+      <RoleID>Role 9</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="034ba3fe-d53e-4b55-807e-1cc7c75b955e">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[ISR3], [Customer DW].[Customer Sales Rep].&amp;[Kim Middleton]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="a3edc118-4f1d-4f2d-b8e0-6bab73c4b99c">
+      <ID>DimensionPermission 8</ID>
+      <Name>DimensionPermission 8</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.643333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.643333Z</LastSchemaUpdate>
+      <RoleID>Role 10</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="2d726515-a814-449c-9ae5-9dfa7d89c33b">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[ISR4]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="678fcd97-3937-4038-af58-f4a324f2fd20">
+      <ID>DimensionPermission 9</ID>
+      <Name>DimensionPermission 9</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.66Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.66Z</LastSchemaUpdate>
+      <RoleID>Role 11</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="f48c150a-30f6-484a-b2d3-8c765b9f2023">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[ISR5]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="f3a5ed5c-99a1-4b69-b556-a5a3cab8340e">
+      <ID>DimensionPermission 10</ID>
+      <Name>DimensionPermission 10</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.676667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.676667Z</LastSchemaUpdate>
+      <RoleID>Role 12</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="b2e0a11f-30c7-4af7-9193-a7c983f941ac">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[ISR6]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="d4c8e183-e068-47a7-9052-eda11372a3f5">
+      <ID>DimensionPermission 11</ID>
+      <Name>DimensionPermission 11</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.693333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.693333Z</LastSchemaUpdate>
+      <RoleID>Role 13</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="ac6182a7-f6df-4ed5-a1a0-587ee672335a">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[ISR7]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="248d73ce-4a1b-4a8e-a82e-eee5867bb12f">
+      <ID>DimensionPermission 12</ID>
+      <Name>DimensionPermission 12</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.71Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.71Z</LastSchemaUpdate>
+      <RoleID>Role 14</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="22d034af-2be0-4c1d-9016-1cee58d61485">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="02f1ed37-e3f5-43bb-a3c9-c2ebad9a65ba">
+      <ID>DimensionPermission 13</ID>
+      <Name>DimensionPermission 13</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.74Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.74Z</LastSchemaUpdate>
+      <RoleID>Role 15</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="bbf96b06-e51f-44a3-88a4-1e1b40f4033d">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="92c4e527-eef9-4c76-9d19-aa8448c7716d">
+      <ID>DimensionPermission 14</ID>
+      <Name>DimensionPermission 14</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.756667Z</LastSchemaUpdate>
+      <RoleID>Role 17</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="dfb44639-12fb-48cf-b237-09de2704d95d">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[John Burian - RSM]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="255d30a1-0829-48bb-b4fa-4e467eda8dd7">
+      <ID>DimensionPermission 15</ID>
+      <Name>DimensionPermission 15</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.773333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.773333Z</LastSchemaUpdate>
+      <RoleID>Role 18</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="a74560bf-384d-4f70-af1a-9e616725ae4d">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="5f44a81c-6545-453e-bd5a-187f5a9b2c48">
+      <ID>DimensionPermission 16</ID>
+      <Name>DimensionPermission 16</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.803333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.803333Z</LastSchemaUpdate>
+      <RoleID>Role 19</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="6abaa70e-805a-4ab7-9116-504cf8f3ea7c">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[Ron Cox - RSM]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="e5f419b5-3f79-4ea1-9447-9c9304f610d5">
+      <ID>DimensionPermission 17</ID>
+      <Name>DimensionPermission 17</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.82Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.82Z</LastSchemaUpdate>
+      <RoleID>Role 20</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="5afed13e-34d8-4162-93e8-6681d0fcf8ad">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[Scott Pederson - RSM]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="7005d375-5ba1-4d29-a841-e0dab370e29c">
+      <ID>DimensionPermission 18</ID>
+      <Name>DimensionPermission 18</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.833333Z</LastSchemaUpdate>
+      <RoleID>Role 21</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="1efb7e98-b8dd-4448-8357-6d4bf96ea955">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="97ade89d-5df7-43f9-809e-3d7fbbafcd68">
+      <ID>DimensionPermission 19</ID>
+      <Name>DimensionPermission 19</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.85Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.85Z</LastSchemaUpdate>
+      <RoleID>Role 22</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="11321098-1937-48a8-8cb3-056932970281">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="0b198c7a-c66d-443d-a583-6eff8599477f">
+      <ID>DimensionPermission 20</ID>
+      <Name>DimensionPermission 20</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.88Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.88Z</LastSchemaUpdate>
+      <RoleID>Role 23</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="aa91d74d-42bf-457a-a6d4-5854004a9c67">
+          <AttributeID>Cust Type</AttributeID>
+          <AllowedSet>{[Customer DW].[Cust Type].&amp;[UPG]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="7bd886ea-484b-40d5-88e8-2ab3024b5a3f">
+      <ID>DimensionPermission 21</ID>
+      <Name>DimensionPermission 21</Name>
+      <CreatedTimestamp>2022-03-03T17:53:43.906667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:43.906667Z</LastSchemaUpdate>
+      <RoleID>Role 24</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="7c3bd78c-aeeb-4d7a-8346-f987da76d81a">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <AllowedSet>{[Customer DW].[Customer Sales Rep].&amp;[NOREEN THEANDER], [Customer DW].[Customer Sales Rep].&amp;[Winston Yip - RSM]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="6cd7cb68-274c-4a39-8958-8fdc5dad2898">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df91dc1a-6a6c-42e0-bad2-63bce1f781fe">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d3a2a0e-398e-45a9-a138-5af3a4e9d254">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>Id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7a6faa29-4073-4ad9-b702-e056b403184f">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c25d1f61-0120-4cea-acc2-b2dd5cec4e9b">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>Id</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4817f78b-247c-402a-b2dd-9a8fd3e2e568">
+          <AttributeID>Company</AttributeID>
+          <Name>Company</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="21cc0698-82d5-4f09-a07f-48a928da19d3">
+          <AttributeID>Bill To Num</AttributeID>
+          <Name>Bill To Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dc89d1ef-71a7-48d9-be15-3310d3fb5614">
+          <AttributeID>Bill To Name</AttributeID>
+          <Name>Bill To Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6ff29d8-3051-4b5f-a6fa-b74b5b9550c9">
+          <AttributeID>Bill To City</AttributeID>
+          <Name>Bill To City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c2993301-b51d-4a1a-bfac-2fe3e018c140">
+          <AttributeID>Bill To State</AttributeID>
+          <Name>Bill To State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="456a55b1-d655-419a-bfc8-1d83a5efdecd">
+          <AttributeID>Bill To Zip</AttributeID>
+          <Name>Bill To Zip</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1444762b-4fe0-4741-9f7c-08c0f2da7125">
+          <AttributeID>Bill To Country</AttributeID>
+          <Name>Bill To Country</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dbba3b79-e0b4-4ecc-9f08-fa326fcccf34">
+          <AttributeID>CSR</AttributeID>
+          <Name>CSR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85bf182f-ce8e-4235-af8e-ae3ed33025ae">
+          <AttributeID>SIC Code</AttributeID>
+          <Name>SIC Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5248536b-546a-4cb6-8bac-4223604fc534">
+          <AttributeID>SIC Desc</AttributeID>
+          <Name>SIC Desc</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5f0d2053-312d-4d51-a2c3-fc38a4887d35">
+          <AttributeID>Parent Cust Num</AttributeID>
+          <Name>Parent Cust Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a8ee0e59-7b8f-44b4-82dd-1c7ff2c3ed25">
+          <AttributeID>Parent Cust Name</AttributeID>
+          <Name>Parent Cust Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4b7fa537-ac28-4fe9-828c-e428dff66eec">
+          <AttributeID>Territory</AttributeID>
+          <Name>Territory</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ccebe58c-4bee-4db3-9b4a-b2368ae57617">
+          <AttributeID>Cust Type</AttributeID>
+          <Name>Cust Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7281d25f-bb18-4239-83cd-3c3080ce4c9c">
+          <AttributeID>Customer Sales Rep</AttributeID>
+          <Name>Customer Sales Rep</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5062c30d-623b-4964-a76c-5c9887581ce4">
+      <ID>Company</ID>
+      <Name>Company</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9090b821-f8f5-491c-a5eb-0ac5725c6b0a">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="485a8310-9b52-44e4-bff5-230bb7dab587">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>Company</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f0a33195-f321-43ee-9bd7-8613daa8a672">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8712178a-aac3-4f1e-8bec-e4d1d852b553">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>Company</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9917d20a-ee26-4a3f-b163-dff6d3c7cdcf">
+      <ID>Bill To Num</ID>
+      <Name>Bill To Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6bde55b-f731-42a9-b022-419347e470d5">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="492ceb91-85d9-4b76-95bc-99f52147a607">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToNum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6ec1024d-cd3e-4724-8287-e25ac332df50">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="40bebb63-78c5-4cf9-bd6d-eaf2509e48ab">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToNum</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2a23dfe2-a3c4-4e2a-b715-a7051f992066">
+      <ID>Bill To Name</ID>
+      <Name>Bill To Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c6a5e17a-e7c1-40d2-8101-3ad33b9a4b24">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9aa786e8-7aa1-4a70-a956-b24777155bec">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="74490f60-3e33-4912-ae3a-26139d7bb537">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7443d914-1a6d-47be-8463-62927da82d1d">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToName</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10e57381-c053-41b5-991e-0cc911d5ab24">
+      <ID>Bill To City</ID>
+      <Name>Bill To City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47a9c50e-0d93-4311-8b03-f44a83f0257b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d9367f3-c320-484f-9d8b-b25c96e2c3ac">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToCity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b22e84b7-6536-4551-8628-d2e35317d261">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="99f737f3-a00e-4cff-8aa7-e01832ecd45d">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToCity</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef489839-3af5-4843-84b1-2271e7a1931d">
+      <ID>Bill To State</ID>
+      <Name>Bill To State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11a97eb2-973c-4a42-b304-3a22c7ed88f2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cd704aa0-149b-479c-a1bf-0867a362b87c">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToState</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9991d92b-90bf-4ccf-890a-5f47d3220cf2">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1f5688e7-ecad-4bc7-97c0-d5e43883dc35">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToState</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="40eeac37-4001-479f-b0f7-e58206843522">
+      <ID>Bill To Zip</ID>
+      <Name>Bill To Zip</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47d0e771-6bf0-4292-b42f-46019db78d7c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6fbfa79d-f635-426a-a2ce-851034370efb">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToZip</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ea1c2e3e-8271-45ec-9b46-b0950129319f">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="36679e66-1cee-48b1-b6ba-ee3bba358910">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToZip</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="41510c33-7437-49ea-9976-f86152c10439">
+      <ID>Bill To Country</ID>
+      <Name>Bill To Country</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad59a23e-5240-4a00-9bd8-df90046ea560">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fbc4fed1-5f63-49b5-8036-745f09fa3cc2">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>BillToCountry</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2862dc8f-6f34-41a5-8927-3a6a1e35f79a">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="23b1ebb2-2f0a-417b-8e6f-6d41aaefe6fb">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>BillToCountry</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="37e802ef-1005-4b2a-9ca7-be914f160bcf">
+      <ID>CSR</ID>
+      <Name>CSR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5fa810a8-746a-4640-85c6-ab18985a1591">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79c9bf6b-c646-45e0-9d6d-3893be437938">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>CSR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="809d713b-5fe1-4a1c-a519-6cc133b68040">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="da607b7f-c18d-466a-b6d9-63f950543b30">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>CSR</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b6b785b0-a654-463a-8e92-ac7eabe3f6b9">
+      <ID>SIC Code</ID>
+      <Name>SIC Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0bdd18c0-db58-4689-aa06-8b95d41c21af">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7caffd75-0ce1-4a79-aeee-1357c9a7ffe9">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>SICCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="14cf5753-f360-484c-8dfd-6a2dc52e03e7">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7f450fd0-e823-4f1b-bc9f-bff653e15d36">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>SICCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6a28e221-da73-4ae8-ab61-c9fb0426b59b">
+      <ID>SIC Desc</ID>
+      <Name>SIC Desc</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46830026-b9ee-41f2-b78b-cfff1e5c452c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd1fab69-1633-4ccf-8683-00202a03ed49">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>SICDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7b2f00f7-238d-4c69-96c5-1591bf5cc29b">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7ee97070-5e59-435a-b1b5-0b1fc388147d">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>SICDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b83b836b-4430-4397-9371-c15f61a689f5">
+      <ID>Parent Cust Num</ID>
+      <Name>Parent Cust Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6f55147-031c-46d1-9920-75230a4706d6">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87089038-cbff-49de-99d2-47c2284b9f43">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>ParentCustNum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="06ea134c-d238-477b-afe5-faf5ba578a40">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="67d44a0e-3d1c-40c2-95a0-ffa93a268065">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>ParentCustNum</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="34c4d77c-ffdc-4bcc-bfd0-d8575efa3bb5">
+      <ID>Parent Cust Name</ID>
+      <Name>Parent Cust Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="73fee2be-4207-4faa-aaf4-727f674ea8e1">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="346b67e0-d6fe-4ac9-8705-e9ba721456b6">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>ParentCustName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f3dec6bc-8ae1-4019-9013-f884d631af69">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f98300eb-4e2c-4bc8-9580-83b17a9d0cdc">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>ParentCustName</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2fdcf376-be89-4c1d-a5fc-943c128acb98">
+      <ID>Territory</ID>
+      <Name>Territory</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0b4f1ec2-726c-4deb-8175-c2e78fdeaaf8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f96a235-ded8-4940-ad12-71d8432a85db">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>Territory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="195f90fe-3a5b-4386-a435-aaa90ec71cd6">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c2cc6d8d-8c39-4a18-a981-ab7773b58ece">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>Territory</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="02daa166-cc04-4d83-a42f-2323aa14b0ee">
+      <ID>Cust Type</ID>
+      <Name>Cust Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6efe5926-5092-4da8-b490-b562c2756df7">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74cfa866-30cd-4bb6-9ab4-70d3834cc528">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>CustType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8da35519-c446-4368-ae18-de495c93c611">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="649777a0-98f7-4712-acec-16f594a72618">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>CustType</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9bcbcc09-8e88-4ad5-93ec-0838ca29dcf7">
+      <ID>Customer Sales Rep</ID>
+      <Name>Customer Sales Rep</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c728c7b4-1702-4c6b-995e-228f689dc6bf">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37746197-4804-4aef-b109-5cf25a5bc178">
+            <TableID>dbo_CustomerDW</TableID>
+            <ColumnID>CustomerSalesRep</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d2148a1d-99aa-495d-b453-d3f9c4432f35">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cc66cb30-f500-42c0-b34c-65b51a81be65">
+          <TableID>dbo_CustomerDW</TableID>
+          <ColumnID>CustomerSalesRep</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="78bd7fc0-a29d-4f4c-aae3-c1daa0658f37">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="0adf53c4-3177-436b-a094-718b7acfe9ce" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

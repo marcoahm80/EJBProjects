@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.InstallLog
+   assemblypath = C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.exe
+Installing service EJBMesService...
+Service EJBMesService has been successfully installed.
+Creating EventLog source EJBMesService in log Application...
+Committing assembly 'C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.InstallLog
+   assemblypath = C:\Projects\EJBMes\EJBMesInterfase\bin\Debug\EJBMesInterfase.exe

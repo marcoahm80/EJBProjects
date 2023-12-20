@@ -1,0 +1,89 @@
+﻿@model EJBMes.Models.DowntimeReport
+
+@{
+    ViewData["Title"] = "End Downtime";
+}
+
+<h1>End Downtime</h1>
+
+<h4>DownTime Activity</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="EmployeeNum" class="control-label"></label>:
+                <input type="hidden" asp-for="EmployeeNum" class="form-control" /><b>@Html.DisplayFor(model => model.EmployeeNum)</b>
+                <span asp-validation-for="EmployeeNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobNum" class="control-label"></label>:
+                <input type="hidden" asp-for="JobNum" class="form-control" /><b>@Html.DisplayFor(model => model.JobNum)</b>
+                <span asp-validation-for="JobNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssemblyNum" class="control-label"></label>:
+                <input type="hidden" asp-for="AssemblyNum" class="form-control" /><b>@Html.DisplayFor(model => model.AssemblyNum)</b>
+                <span asp-validation-for="AssemblyNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpSeq" class="control-label"></label>:
+                <input type="hidden" asp-for="OpSeq" class="form-control" /><b>@Html.DisplayFor(model => model.OpSeq)</b>
+                <span asp-validation-for="OpSeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DownTimeStartDate" class="control-label"></label>:
+                <input type="hidden" asp-for="DownTimeStartDate" class="form-control" /><b>@Html.DisplayFor(model => model.DownTimeStartDate)</b>
+                <span asp-validation-for="DownTimeStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DownTimeEndDate" class="control-label"></label>
+                <input asp-for="DownTimeEndDate" class="form-control" />
+                <span asp-validation-for="DownTimeEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceGroup" class="control-label"></label>:
+                <input type="hidden" asp-for="ResourceGroup" class="form-control" /><b>@Html.DisplayFor(model => model.ResourceGroup)</b>
+                <span asp-validation-for="ResourceGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceId" class="control-label"></label>:
+                <input type="hidden" asp-for="ResourceId" class="form-control" /><b>@Html.DisplayFor(model => model.ResourceId)</b>
+                <span asp-validation-for="ResourceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceNotes" class="control-label"></label>
+                <input asp-for="ReferenceNotes" class="form-control" />
+                <span asp-validation-for="ReferenceNotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReasonCode" class="control-label"></label>
+                @* <input asp-for="ReasonCode" class="form-control" /> *@
+                @Html.DropDownListFor(x=>x.ReasonCode, (IEnumerable<SelectListItem>)ViewBag.modelListReason , "--Select a Reason--" , new { @class="form-control", id="ddReason"})
+                <span asp-validation-for="ReasonCode" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="hidden" class="form-check-input" asp-for="ActiveDowntime" />
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="hidden" class="form-check-input" asp-for="Procesed" />
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Back to List" class="btn btn-secondary" asp-action="BackToList" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

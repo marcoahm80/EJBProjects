@@ -1,0 +1,244 @@
+﻿@model EJBMes.Models.ScrapReport
+@{
+    ViewData["Title"] = "Create Scrap";
+    List<ScrapReport> modelList = new List<ScrapReport>();
+}
+
+<h1>Create Scrap</h1>
+
+<h4>ScrapReport</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateById">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployeeNum" class="control-label"></label>
+                <input asp-for="EmployeeNum" class="form-control" readonly value="@ViewData["employeID"]" />
+                <span asp-validation-for="EmployeeNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobNum" class="control-label"></label>
+                <input asp-for="JobNum" class="form-control" readonly value="@ViewData["JobNum"]" />
+                <span asp-validation-for="JobNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssemblyNum" class="control-label"></label>
+                <input asp-for="AssemblyNum" class="form-control" readonly value="@ViewData["AssemblyNum"]" />
+                <span asp-validation-for="AssemblyNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpSeq" class="control-label"></label>
+                <input asp-for="OpSeq" class="form-control" readonly value="@ViewData["OpSeq"]" />
+                <span asp-validation-for="OpSeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrapDate" class="control-label"></label>
+                <input asp-for="ScrapDate" class="form-control" value="@ViewData["ScrapDate"]" />
+                <span asp-validation-for="ScrapDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceGroup" class="control-label"></label>
+                <input asp-for="ResourceGroup" class="form-control" readonly value="@ViewData["ResourceGroup"]" />
+                <span asp-validation-for="ResourceGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceId" class="control-label"></label>
+                <input asp-for="ResourceId" class="form-control" readonly value="@ViewData["ResourceId"]" />
+                <span asp-validation-for="ResourceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceNotes" class="control-label"></label>
+                <input asp-for="ReferenceNotes" class="form-control" value="@ViewData["ReferenceNotes"]" />
+                <span asp-validation-for="ReferenceNotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrapQty" class="control-label"></label>
+                <input asp-for="ScrapQty" class="form-control" value="@ViewData["ScrapQty"]" />
+                <span asp-validation-for="ScrapQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReasonCode" class="control-label"></label>
+                @* <input asp-for="ReasonCode" class="form-control" /> *@
+                @Html.DropDownListFor(x=>x.ReasonCode, (IEnumerable<SelectListItem>)ViewBag.modelListReason , "--Select a Reason--" , new { @class="form-control", id="ddReason"})
+                <span asp-validation-for="ReasonCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhseCode" class="control-label"></label>
+                @* <input asp-for="WhseCode" class="form-control" value="@ViewData["WhseCode"]" /> *@
+                @Html.DropDownListFor(x=>x.WhseCode, (IEnumerable<SelectListItem>)ViewBag.modelListWhse , "--Select a Warehouse--" , new { @class="form-control", id="ddWhse", value="@ViewData[\"WhseCode\"]" })
+                <span asp-validation-for="WhseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BinNum" class="control-label"></label>
+                @* <input asp-for="BinNum" class="form-control" value="@ViewData["BinNum"]" /> *@
+                @Html.DropDownListFor(x=>x.BinNum, new List<SelectListItem>() , "--Select an BinNum--" , new { @class="form-control" , id="ddWhseBin", value="@ViewData[\"BinNum\"]"})
+                <span asp-validation-for="BinNum" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input type="hidden" class="form-check-input" asp-for="Procesed" value="false" /> @* @Html.DisplayNameFor(model => model.Procesed) *@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <form>
+            <div class="form-group">
+                <input type="submit" value="Back to List" class="btn btn-secondary" asp-action="BackToListProduction" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6"> <h2>Scrap Reports By JobNum</h2>
+        <table class="table">
+            <thead class="Head-TR">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeNum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.JobNum)
+                    </th>
+                    @* <th>
+                    @Html.DisplayNameFor(model => model.AssemblyNum)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.OpSeq)
+                    </th> *@
+                    <th>
+                        @Html.DisplayNameFor(model => model.ScrapDate)
+                    </th>
+                    @* <th>
+                    @Html.DisplayNameFor(model => model.ResourceGroup)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.ResourceId)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.ReferenceNotes)
+                    </th> *@
+                    <th>
+                        @Html.DisplayNameFor(model => model.ScrapQty)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReasonCode)
+                    </th>
+                    @* <th>
+                    @Html.DisplayNameFor(model => model.WhseCode)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.BinNum)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.Procesed)
+                    </th> *@
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewData["modelList"] != null)
+                {
+                    modelList = (List<ScrapReport>)ViewData["modelList"];
+                }
+                @foreach (var item in modelList)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeNum)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobNum)
+                        </td>
+                        @*  <td>
+                    @Html.DisplayFor(modelItem => item.AssemblyNum)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.OpSeq)
+                    </td> *@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ScrapDate)
+                        </td>
+                        @*  <td>
+                    @Html.DisplayFor(modelItem => item.ResourceGroup)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.ResourceId)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceNotes)
+                    </td> *@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ScrapQty)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReasonCode)
+                        </td>
+                        @*  <td>
+                    @Html.DisplayFor(modelItem => item.WhseCode)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.BinNum)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Procesed)
+                    </td> *@
+                        <td>
+                            <form method="get">
+                                <input type="hidden" id="Id" name="Id" value="@item.Id" />
+                                @if (item.Procesed)
+                                {
+                                    @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> *@
+                                    <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                                }
+                                else
+                                {
+                                    @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                                    <input type="submit" value="Edit" class="btn btn-outline-secondary" asp-action="Edit" />
+                                    <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                                    <input type="submit" value="Delete" class="btn btn-outline-danger" asp-action="Delete" />
+                                }
+                            </form>
+                    </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+            
+
+@* <div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $("#ddWhse").change(RefreshBinNums);
+
+            RefreshBinNums();
+
+            function RefreshBinNums() {
+                $.get("/Scrap/GetBinNums", { siteID: "@ViewData["siteID"]", WareHouseCode: $("#ddWhse").val() }, function (data) {
+                    // Empty DropDownList
+                    $("#ddWhseBin").empty();
+                    // Add new Label
+                    $("#ddWhseBin").append("<option value>--Select an BinNum--</option>");
+                    // Build the DropDownList from Json result (data)
+                    $.each(data, function (index, row) {
+                        $("#ddWhseBin").append("<option value='" + row.value + "'>" + row.text + "</option>")
+                    });
+                    //$("#ddWhseBin").append("<option value>--Select an BinNum--</option>");
+                });
+            };
+
+        });
+    </script>
+}
+

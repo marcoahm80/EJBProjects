@@ -1,0 +1,197 @@
+﻿@model EJBMes.Models.ScrapReport
+
+@{
+    ViewData["Title"] = "Create Scrap";
+}
+
+<h1>Create Scrap</h1>
+
+<h4>ScrapReport</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployeeNum" class="control-label"></label>
+                <input asp-for="EmployeeNum" class="form-control" readonly value="@ViewData["employeID"]" />
+                <span asp-validation-for="EmployeeNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobNum" class="control-label"></label>
+                <input type="text" list="listJobs" asp-for="JobNum" class="form-control" id="ddJobs" />
+                <datalist id="listJobs"></datalist>
+                @* <input asp-for="JobNum" class="form-control"  /> *@
+                @* @Html.DropDownListFor(x=>x.JobNum, (IEnumerable<SelectListItem>)ViewBag.modelListJobs , "--Select a Job--" , new { @class="form-control", id="ddJobs"}) *@
+                <span asp-validation-for="JobNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssemblyNum" class="control-label"></label>
+                @* <input asp-for="AssemblyNum" class="form-control"  /> *@
+                @Html.DropDownListFor(x=>x.AssemblyNum, new List<SelectListItem>() , "--Select an Assembly Num--" , new { @class="form-control" , id="ddJobAsm"})
+                <span asp-validation-for="AssemblyNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpSeq" class="control-label"></label>
+                @* <input asp-for="OpSeq" class="form-control"  /> *@
+                @Html.DropDownListFor(x=>x.OpSeq, new List<SelectListItem>() , "--Select an Operation--" , new { @class="form-control" , id="ddJobOper"})
+                <span asp-validation-for="OpSeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrapDate" class="control-label"></label>
+                <input asp-for="ScrapDate" class="form-control" value="@ViewData["ScrapDate"]" />
+                <span asp-validation-for="ScrapDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceGroup" class="control-label"></label>
+                <input asp-for="ResourceGroup" class="form-control" id="txtResourceGroup" readonly />
+                <span asp-validation-for="ResourceGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceId" class="control-label"></label>
+                <input asp-for="ResourceId" class="form-control" id="txtResourceId" readonly />
+                <span asp-validation-for="ResourceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceNotes" class="control-label"></label>
+                <input asp-for="ReferenceNotes" class="form-control" />
+                <span asp-validation-for="ReferenceNotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrapQty" class="control-label"></label>
+                <input asp-for="ScrapQty" class="form-control" />
+                <span asp-validation-for="ScrapQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReasonCode" class="control-label"></label>
+                @* <input asp-for="ReasonCode" class="form-control" /> *@
+                @Html.DropDownListFor(x=>x.ReasonCode, (IEnumerable<SelectListItem>)ViewBag.modelListReason , "--Select a Reason--" , new { @class="form-control", id="ddReason"})
+                <span asp-validation-for="ReasonCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhseCode" class="control-label"></label>
+                @* <input asp-for="WhseCode" class="form-control" /> *@
+                @Html.DropDownListFor(x=>x.WhseCode, (IEnumerable<SelectListItem>)ViewBag.modelListWhse , "--Select a Warehouse--" , new { @class="form-control", id="ddWhse"})
+                <span asp-validation-for="WhseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BinNum" class="control-label"></label>
+                @* <input asp-for="BinNum" class="form-control" /> *@
+                @Html.DropDownListFor(x=>x.BinNum, new List<SelectListItem>() , "--Select an BinNum--" , new { @class="form-control" , id="ddWhseBin"})
+                <span asp-validation-for="BinNum" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input type="hidden" class="form-check-input" asp-for="Procesed" value="false" /> @* @Html.DisplayNameFor(model => model.Procesed) *@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <form>
+            <div class="form-group">
+                <input type="submit" value="Back to List" class="btn btn-secondary" asp-action="BackToList" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@* <div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            $("#ddJobs").change(RefreshAssemblys);
+
+            $("#ddJobAsm").change(RefreshOperations);
+
+            $("#ddJobOper").change(RefreshResources);
+
+            $("#ddWhse").change(RefreshBinNums);
+
+            RefreshJobs();
+            RefreshAssemblys();
+            //RefreshOperations();
+            //RefreshResources();
+            RefreshBinNums();
+
+            function RefreshJobs() {
+                $.get("/Scrap/GetJobs", { siteID: "@ViewData["siteID"]" }, function (data) {
+                    // Empty DropDownList
+                    $("#listJobs").empty();
+                    // Add new Label
+                    //$("#listJobs").append("<option value> -- Select a Job Num --</option>")
+                    // Build the DropDownList from Json result (data)
+                    $.each(data, function (index, row) {
+                        $("#listJobs").append("<option value='" + row.jobNum + "' label='" + row.partNum + "'>" + row.jobNum + "</option>")
+                    });
+                    //$("#listJobs").append("<option value> -- Select a JobNum --</option>");
+                });
+            };
+
+            function RefreshAssemblys() {
+                $.get("/Scrap/GetJobsAsmblys", { siteID: "@ViewData["siteID"]", JobNum: $("#ddJobs").val() }, function (data) {
+                    // Empty DropDownList
+                    $("#ddJobAsm").empty();
+                    // Add new Label
+                    //$("#ddJobAsm").append("<option value> -- Select an Assembly Num of " + $("#ddJobs option:selected").text() + " --</option>")
+                    // Build the DropDownList from Json result (data)
+                    $.each(data, function (index, row) {
+                        $("#ddJobAsm").append("<option value='" + row.value + "'>" + row.text + "</option>")
+                    });
+                    $("#ddJobAsm").append("<option value> -- Select an Assembly Num --</option>");
+                    RefreshOperations();
+                });
+                //RefreshOperations();
+            };
+
+            function RefreshOperations() {
+                $.get("/Scrap/GetJobsAsmOprs", { siteID: "@ViewData["siteID"]", JobNum: $("#ddJobs").val(), AssemblyNum: $("#ddJobAsm").val() }, function (data) {
+                    // Empty DropDownList
+                    $("#ddJobOper").empty();
+                    // Add new Label
+                    //$("#ddJobOper").append("<option value>--Select an Operation List--</option>")
+                    // Build the DropDownList from Json result (data)
+                    $.each(data, function (index, row) {
+                        $("#ddJobOper").append("<option value='" + row.value + "'>" + row.text + "</option>")
+                    });
+                    $("#ddJobOper").append("<option value>--Select an Operation List--</option>");
+                    RefreshResources();
+                });
+                //RefreshResources();
+            };
+
+            function RefreshResources() {
+                $.get("/Scrap/GetResources", { siteID: "@ViewData["siteID"]", JobNum: $("#ddJobs").val(), AssemblyNum: $("#ddJobAsm").val(), OprSeq: $("#ddJobOper").val() }, function (data) {
+                    var txtGR = document.getElementById("txtResourceGroup");
+                    var txtR = document.getElementById("txtResourceId");
+                    txtGR.value = "";
+                    txtR.value = "";
+                    console.log(data);
+                    $.each(data, function (index, row) {
+                        txtGR.value = row.resourceGroup;
+                        txtR.value = row.resourceID;
+                    });
+                });
+            };
+
+            function RefreshBinNums() {
+                $.get("/Scrap/GetBinNums", { siteID: "@ViewData["siteID"]", WareHouseCode: $("#ddWhse").val() }, function (data) {
+                    // Empty DropDownList
+                    $("#ddWhseBin").empty();
+                    // Add new Label
+                    $("#ddWhseBin").append("<option value>--Select an BinNum--</option>");
+                    // Build the DropDownList from Json result (data)
+                    $.each(data, function (index, row) {
+                        $("#ddWhseBin").append("<option value='" + row.value + "'>" + row.text + "</option>")
+                    });
+                    //$("#ddWhseBin").append("<option value>--Select an BinNum--</option>"); 
+                });
+            };
+
+        });
+    </script>
+}

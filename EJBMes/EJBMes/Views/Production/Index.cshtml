@@ -1,0 +1,163 @@
+﻿@model IEnumerable<EJBMes.Models.ProdReport>
+
+@{
+    ViewData["Title"] = "Production Report";
+}
+
+<h1>Production Report</h1>
+
+<p>
+    @if (ViewData["message"] != null)
+    {
+        <div class="form-group">
+            <div class="alert alert-danger" role="alert">
+                @ViewData["message"]
+            </div>
+        </div>
+    }
+    @* <a asp-action="Create">Start Activity</a> *@
+    <form method="get">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="Start Activity" class="btn btn-primary" asp-action="Create" />
+                    <input type="submit" value="Report Scrap" class="btn btn-primary" asp-action="CreateScrap" />
+                </div>
+                <div class="col">
+                    <span>Active Labor</span>@Html.RadioButton("ActiveAct", "A", true)                     
+                </div>
+                <div class="col">
+                    <span>Inactive Labor</span>@Html.RadioButton("ActiveAct", "I", false)
+                </div>
+                <div class="col">
+                    <span> From Date </span>@Html.TextBox("FromDate", null, new {
+                    type = "date",
+                    value = ViewData["FromDate"]
+                    })
+                </div>
+                <div class="col">
+                    <span> To Date </span>@Html.TextBox("ToDate", null, new {
+                    type = "date",
+                    value = ViewData["ToDate"]
+                    })
+                </div>
+                <div class="col"><input type="submit" value="Retrive" class="btn btn-secondary" width="15" asp-action="Index" /></div>
+            </div>
+        </div>             
+    </form>
+</p>
+<table class="table">
+    <thead class="Head-TR">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobNum)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.AssemblyNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpSeq)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceId)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.ReferenceNotes)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.LaborQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveLabor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procesed)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobNum)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.AssemblyNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpSeq)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceId)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.ReferenceNotes)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.LaborQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveLabor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procesed)
+            </td>
+            <td>
+                <form method="get">
+                    <input type="hidden" id="Id" name="Id" value="@item.Id" />
+                    @if (!item.ActiveLabor)
+                    {
+                        @if (item.Procesed)
+                        {
+                            @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> *@
+                                <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                        } else
+                        {
+                            @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                                <input type="submit" value="Edit" class="btn btn-outline-secondary" asp-action="Edit" />
+                                <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                                <input type="submit" value="Delete" class="btn btn-outline-danger" asp-action="Delete" />
+                        }
+                    } else
+                    {
+                        @* <a asp-action="ReportQty" asp-route-id="@item.Id">Report Quantity</a> 
+                        <a asp-action="EndActivity" asp-route-id="@item.Id">End Activity</a> *@
+                            <input type="submit" value="Report Quantity" class="btn btn-outline-dark" asp-action="ReportQty" />
+                            <input type="submit" value="End Activity" class="btn btn-outline-success" asp-action="EndActivity" />
+                            <input type="submit" value="Details" class="btn btn-outline-info" asp-action="Details" />
+                    }
+                    @* <a asp-action="CreateScrapByID" asp-route-id="@item.Id">Scrap Report</a> *@
+                        <input type="submit" value="Scrap Report" class="btn btn-outline-primary" asp-action="CreateScrapByID" />
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

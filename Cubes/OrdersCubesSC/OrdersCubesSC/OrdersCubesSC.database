@@ -1,0 +1,221 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a89ae19e-6f29-42c0-981e-dbb8440d8495" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>OrdersCubesSC</ID>
+  <Name>OrdersCubesSC</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <EstimatedSize>617139703</EstimatedSize>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <DatabasePermissions>
+    <DatabasePermission dwd:design-time-name="a3e4acdd-39ce-4780-b680-81f996221159">
+      <ID>DatabasePermission</ID>
+      <Name>DatabasePermission</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.156667Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="88c141bd-b024-4f47-8fa0-6ac7accb3a79">
+      <ID>DatabasePermission 1</ID>
+      <Name>DatabasePermission 1</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.156667Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="d2a479cd-73cf-4fa8-8f97-9691161b2ec9">
+      <ID>DatabasePermission 2</ID>
+      <Name>DatabasePermission 2</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.156667Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="1d9c3ba3-a6d2-4941-9db0-3bd6a7ce9b15">
+      <ID>DatabasePermission 3</ID>
+      <Name>DatabasePermission 3</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.173333Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="cde8742f-4cdd-42df-8e8d-551dfa082d99">
+      <ID>DatabasePermission 4</ID>
+      <Name>DatabasePermission 4</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.173333Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="97b32a08-f82a-49cf-8403-badcf7b3a47f">
+      <ID>DatabasePermission 5</ID>
+      <Name>DatabasePermission 5</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.19Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="633f5298-624e-4eef-8a5c-e8aa708c45fa">
+      <ID>DatabasePermission 6</ID>
+      <Name>DatabasePermission 6</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.19Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="a5aa42a0-70f9-4861-b89b-5b1d5146721b">
+      <ID>DatabasePermission 7</ID>
+      <Name>DatabasePermission 7</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.203333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-10T17:27:24.873333Z</LastSchemaUpdate>
+      <RoleID>Role 7</RoleID>
+      <Process>true</Process>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+      <Administer>true</Administer>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="0ae98cdc-0e81-48b4-bdcc-4cd2a1875547">
+      <ID>DatabasePermission 8</ID>
+      <Name>DatabasePermission 8</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.203333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.203333Z</LastSchemaUpdate>
+      <RoleID>Role 8</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="d60ba8cd-014b-4771-8a25-ec81ee97beee">
+      <ID>DatabasePermission 9</ID>
+      <Name>DatabasePermission 9</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.22Z</LastSchemaUpdate>
+      <RoleID>Role 9</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="08e7ce9e-282f-4d33-99b7-53477afd6853">
+      <ID>DatabasePermission 10</ID>
+      <Name>DatabasePermission 10</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.22Z</LastSchemaUpdate>
+      <RoleID>Role 10</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="4a8145ce-9b08-4cb7-9eed-ac58bedc6005">
+      <ID>DatabasePermission 11</ID>
+      <Name>DatabasePermission 11</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.236667Z</LastSchemaUpdate>
+      <RoleID>Role 11</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="9343ec46-c5f9-491e-8847-63bc17e0bd78">
+      <ID>DatabasePermission 12</ID>
+      <Name>DatabasePermission 12</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.236667Z</LastSchemaUpdate>
+      <RoleID>Role 12</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="d8d3285b-f203-439e-8f4a-756193eef68e">
+      <ID>DatabasePermission 13</ID>
+      <Name>DatabasePermission 13</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.236667Z</LastSchemaUpdate>
+      <RoleID>Role 13</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="7e9824fe-bd4a-45cf-a6aa-bd1d54267a60">
+      <ID>DatabasePermission 14</ID>
+      <Name>DatabasePermission 14</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.253333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.253333Z</LastSchemaUpdate>
+      <RoleID>Role 14</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="861cb087-cbb4-4e5c-b306-35e7717c98d7">
+      <ID>DatabasePermission 15</ID>
+      <Name>DatabasePermission 15</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.253333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.253333Z</LastSchemaUpdate>
+      <RoleID>Role 15</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="ee711d7a-cdfc-4dd8-a649-bb00d43cb2bb">
+      <ID>DatabasePermission 16</ID>
+      <Name>DatabasePermission 16</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.253333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.253333Z</LastSchemaUpdate>
+      <RoleID>Role 16</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="8fbde897-04eb-42a3-be7d-ab0000c79cbb">
+      <ID>DatabasePermission 17</ID>
+      <Name>DatabasePermission 17</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.266667Z</LastSchemaUpdate>
+      <RoleID>Role 17</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="01248261-cb87-4a87-8b4d-79a67367a394">
+      <ID>DatabasePermission 18</ID>
+      <Name>DatabasePermission 18</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.266667Z</LastSchemaUpdate>
+      <RoleID>Role 18</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="4a8a295c-d792-4b41-a1ca-a00e140a1d75">
+      <ID>DatabasePermission 19</ID>
+      <Name>DatabasePermission 19</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.266667Z</LastSchemaUpdate>
+      <RoleID>Role 19</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="3804133d-23c5-49b6-8c49-b13a2bddac81">
+      <ID>DatabasePermission 20</ID>
+      <Name>DatabasePermission 20</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.283333Z</LastSchemaUpdate>
+      <RoleID>Role 20</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="5a958ed1-decb-4438-82a8-305a05919bfa">
+      <ID>DatabasePermission 21</ID>
+      <Name>DatabasePermission 21</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.283333Z</LastSchemaUpdate>
+      <RoleID>Role 21</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="a39c62ca-e1e5-4e72-9c95-377d91f2cb0f">
+      <ID>DatabasePermission 22</ID>
+      <Name>DatabasePermission 22</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.3Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.3Z</LastSchemaUpdate>
+      <RoleID>Role 22</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="0ac123e9-3db4-463a-bc45-c23e5f208030">
+      <ID>DatabasePermission 23</ID>
+      <Name>DatabasePermission 23</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.3Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.3Z</LastSchemaUpdate>
+      <RoleID>Role 23</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="30cf3f1b-271f-4ed1-85e8-f11328a1db80">
+      <ID>DatabasePermission 24</ID>
+      <Name>DatabasePermission 24</Name>
+      <CreatedTimestamp>2022-03-03T17:53:44.316667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-03-03T17:53:44.316667Z</LastSchemaUpdate>
+      <RoleID>Role 24</RoleID>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+  </DatabasePermissions>
+</Database>

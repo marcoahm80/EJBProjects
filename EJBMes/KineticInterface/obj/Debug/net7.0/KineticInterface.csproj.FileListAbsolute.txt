@@ -1,0 +1,12 @@
+C:\Projects\EJBMes\KineticInterface\bin\Debug\net7.0\KineticInterface.deps.json
+C:\Projects\EJBMes\KineticInterface\bin\Debug\net7.0\KineticInterface.dll
+C:\Projects\EJBMes\KineticInterface\bin\Debug\net7.0\KineticInterface.pdb
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.csproj.AssemblyReference.cache
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.AssemblyInfoInputs.cache
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.AssemblyInfo.cs
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.csproj.CoreCompileInputs.cache
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.dll
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\refint\KineticInterface.dll
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\KineticInterface.pdb
+C:\Projects\EJBMes\KineticInterface\obj\Debug\net7.0\ref\KineticInterface.dll

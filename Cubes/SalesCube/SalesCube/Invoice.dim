@@ -1,0 +1,551 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6fe5d709-4924-49e6-8515-1072f77278d7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Invc DW</ID>
+  <Name>Invoice</Name>
+  <CreatedTimestamp>2021-04-28T15:58:04.113333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-05-17T08:08:55.146667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7026" scrolltop="-7157" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12012" y="19341" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="InvcDW" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_InvcDW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7026</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-7157</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="123">
+            <Shape Id="Id" Expanded="true">
+              <Attributes>
+                <Attribute Id="Id" />
+                <Attribute Id="Company" />
+                <Attribute Id="Contact" />
+                <Attribute Id="Invoice Line" />
+                <Attribute Id="Invoice Num" />
+                <Attribute Id="Invoice Type" />
+                <Attribute Id="Marking" />
+                <Attribute Id="Order Line" />
+                <Attribute Id="Order Number" />
+                <Attribute Id="P Code" />
+                <Attribute Id="Plant" />
+                <Attribute Id="Ship Via" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-07-20T22:28:09.8Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fa8e4704-9fe3-42ff-9ca7-0bf407da3d24">
+    <DataSourceViewID>Data Warehouse</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="aa51a073-dd3b-4354-8039-0ac44d471649">
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="a022785d-6d79-48f5-9c0c-498b6f69ec75">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5e7c926b-849e-4dfb-9447-972f895261c0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b1c94f3-5570-4fb8-a78e-c93d531256f3">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2426a70c-75f6-49bd-8441-f43383a6aab0">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="912b7595-d669-4bb9-892e-25e7fc76a5d0">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Id</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e17c46a3-9cfd-4586-a239-63f88f8a4fe9">
+          <AttributeID>Company</AttributeID>
+          <Name>Company</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c45df6f3-91cf-43a8-84f0-4f20439da55b">
+          <AttributeID>Ship Via</AttributeID>
+          <Name>Ship Via</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e3816ce-9dd2-406a-9a03-1ed7acff96e7">
+          <AttributeID>Invoice Num</AttributeID>
+          <Name>Invoice Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3a4af03b-923b-4186-a444-63563eab79a1">
+          <AttributeID>P Code</AttributeID>
+          <Name>P Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f42d81c7-7be3-47c9-ab12-c0e2233a2fac">
+          <AttributeID>Order Line</AttributeID>
+          <Name>Order Line</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="11a2308e-5be3-41e7-8378-ab200606fa4f">
+          <AttributeID>Invoice Type</AttributeID>
+          <Name>Invoice Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4bedacd4-243f-49d9-9804-2548611eae84">
+          <AttributeID>Plant</AttributeID>
+          <Name>Plant</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5858f133-d57f-4f17-a583-36b9dfc50315">
+          <AttributeID>Order Number</AttributeID>
+          <Name>Order Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4d3a719f-75df-47da-ba4f-533f6dd7dc14">
+          <AttributeID>Marking</AttributeID>
+          <Name>Marking</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2d93c88a-9f52-4936-a22c-bd501cd8d68f">
+          <AttributeID>Contact</AttributeID>
+          <Name>Contact</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6a9cefc9-cdc5-4f55-8976-5fbe7cdc99ee">
+          <AttributeID>Invoice Line</AttributeID>
+          <Name>Invoice Line</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1d735bf3-8196-4224-bc0f-470a64dfa7dc">
+          <AttributeID>Bundles</AttributeID>
+          <Name>Bundles</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2f88f9c9-2611-4b88-bd0b-5eaae407ddbd">
+          <AttributeID>Credit Memo</AttributeID>
+          <Name>Credit Memo</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f856178e-b0cb-4501-a6e2-32d182476f89">
+      <ID>Company</ID>
+      <Name>Company</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b3069963-0a68-428d-a4bc-858b1dbf811d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8948b5b2-97fd-457e-846c-69b3d007f489">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Company</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="240b4bed-eee7-49f1-b3f4-9c6b5d577724">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="880d0186-a880-409a-9fe8-721a72455cc1">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Company</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="faf70e57-785a-44c0-8b21-2f4b132d680d">
+      <ID>Ship Via</ID>
+      <Name>Ship Via</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf93e987-a74d-485f-b52f-1abb451ff3bb">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a61739f6-fca7-45aa-896f-060f98c78355">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>ShipVia</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="61a93178-63e5-4e6b-b8a2-44253a884390">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e7bab936-d120-479e-a290-8b467bc4a362">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>ShipVia</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0eff044a-943a-4b0e-b086-a4064fe027f5">
+      <ID>Invoice Num</ID>
+      <Name>Invoice Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d9a5113-16a2-48dc-b8ff-5cbc0404ce72">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d50d9c7-a5d2-4e94-b899-a81a70eef763">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>InvoiceNum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="167b4ed0-bb6b-48ae-9be0-c60468b0bcae">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="815437f0-2d15-4104-a1c2-5dfbcb9f47da">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>InvoiceNum</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d6f6288e-b729-45d0-8ffc-f3027d3ec87a">
+      <ID>P Code</ID>
+      <Name>P Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8dfc75f5-38ee-4237-bbf6-16ddc37cfa8f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48dd98ba-b9ab-468b-8869-ab2e3311a74d">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f4b150b6-a629-4e73-958b-d94143cc41d6">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="69c7d735-03ba-4577-a811-8f2b10ea79ad">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Id</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="41a27188-7929-40f0-9129-9ba62aa2ab86">
+      <ID>Order Line</ID>
+      <Name>Order Line</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4964927e-8c1e-4bea-a46e-e243615b7b44">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b50f22cd-814d-43e5-960a-aae63ec3e5d0">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>OrderLine</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b603dd6c-5ef0-46ed-8e1e-763f36ad8fba">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="6a6fece2-1633-49cd-b92c-a28fe6be7223">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>OrderLine</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aee6e566-79bb-4747-a8e2-7929d77153a2">
+      <ID>Invoice Type</ID>
+      <Name>Invoice Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25b54439-f289-44cd-8c0e-9f556334c776">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a96f0b2a-0128-4680-8e50-b8bb2b63bc1a">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>InvoiceType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0dc6988a-a295-4635-bdf9-7596411b17fd">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b1d13c2e-f882-40f4-890e-625444ee38c3">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>InvoiceType</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4ef6447d-aeee-4a93-9b93-24c49fd0d8ac">
+      <ID>Plant</ID>
+      <Name>Plant</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8a494a0-4640-4a0f-a246-80104663e9e6">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="51c08717-d204-473d-a2de-f7a3de181670">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Plant</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c6e6a7ea-df44-4d97-96ae-b51a6c9d5a6e">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ab392c0f-ba29-4a69-880d-8935da29afcd">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Plant</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31f0824e-c1fb-44c3-b666-aea8859c9f10">
+      <ID>Order Number</ID>
+      <Name>Order Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9c1ea25-b2a3-4029-81ed-733ab066d6ab">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eee20bfb-c307-4435-a571-994c946e532b">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>OrderNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="652659d5-9212-4a77-86d6-42fcfed060fd">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d42b6328-c442-46b4-a94a-97739a469f71">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>OrderNumber</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b0538bf6-deea-4d05-9ed5-8de11da2aabb">
+      <ID>Marking</ID>
+      <Name>Marking</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd92f874-5692-43f4-9536-f72f4784756e">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7c3874af-1c04-4ed1-88ef-62856d487dd1">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Marking</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8fc9305c-5861-4851-9b4a-28c6dfa20d5f">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="646c2c5b-86e8-47ca-a9ec-d86d86aa2fbc">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Marking</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1c47a7f0-f4c9-4abe-8d0d-e3a25e32e3c2">
+      <ID>Contact</ID>
+      <Name>Contact</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d84c3bdd-5aa0-41a4-9969-86ce6820ee62">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5947fee1-82cd-41eb-b8eb-42b55e5e5c5d">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Contact</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f80465a0-62a5-44fc-8490-6e826296e1fd">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d25da14e-c9aa-4f7a-809c-b073742eebc7">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>Contact</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1d641a19-d6f8-4c3a-a1f7-8d150114ab12">
+      <ID>Invoice Line</ID>
+      <Name>Invoice Line</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a618c99c-b290-4d18-97fa-65e7cdbd8830">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b04edfa-0513-4828-b3e8-69006f3e3fda">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>InvoiceLine</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f7ed776e-ed74-4d21-98c8-186b5ae5fb18">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="222d90a6-67b5-42e3-bbc8-d0223441d8d9">
+          <TableID>dbo_InvcDW</TableID>
+          <ColumnID>InvoiceLine</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="861594d6-0c88-4aae-97ec-11832d418a07">
+      <ID>Bundles</ID>
+      <Name>Bundles</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c6a79c01-33d8-4fea-8c1d-df03930e0dfe">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a10354bd-126d-4f95-a78f-b73338c8e274">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>Bundles</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78e961b0-497e-468b-b671-588bd9668a10">
+      <ID>Credit Memo</ID>
+      <Name>Credit Memo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="394be983-2c71-49e7-989d-bb464108e623">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34936f33-2a13-4dad-9a47-a772a7dbb578">
+            <TableID>dbo_InvcDW</TableID>
+            <ColumnID>CreditMemo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="a759f588-0128-4ba5-90d6-911fca1bf1a9">
+      <ID>Hierarchy</ID>
+      <Name>Invoice Types</Name>
+      <Levels>
+        <Level dwd:design-time-name="bee5e389-0478-43c5-bb48-24df5b8f79f1">
+          <ID>Invoice Type</ID>
+          <Name>Invoice Type</Name>
+          <SourceAttributeID>Invoice Type</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="92b8b717-7644-4c28-a1c2-3fa612b6445f">
+          <ID>Invoice Num</ID>
+          <Name>Invoice Num</Name>
+          <SourceAttributeID>Invoice Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="c01bf37f-9283-4774-845b-d5a8b8bacfc4">
+      <ID>Hierarchy 1</ID>
+      <Name>By Plant</Name>
+      <Levels>
+        <Level dwd:design-time-name="bdb4cb56-85da-4cae-be1a-33ccc6688c6a">
+          <ID>Plant</ID>
+          <Name>Plant</Name>
+          <SourceAttributeID>Plant</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="39041586-238d-46d2-bc2a-4c7eff87a280">
+          <ID>Invoice Num</ID>
+          <Name>Invoice Num</Name>
+          <SourceAttributeID>Invoice Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="b694d4c3-1b38-468c-8f73-f997d965fecb">
+      <ID>Hierarchy 2</ID>
+      <Name>By Ship Via</Name>
+      <Levels>
+        <Level dwd:design-time-name="a4b068a8-2d96-410f-abab-059bc389f62c">
+          <ID>Ship Via</ID>
+          <Name>Ship Via</Name>
+          <SourceAttributeID>Ship Via</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="11f81d9c-c2b7-4916-a6b7-3950f2a47b5d">
+          <ID>Invoice Num</ID>
+          <Name>Invoice Num</Name>
+          <SourceAttributeID>Invoice Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="d2b946ca-562f-40b6-9df5-83169bd58983">
+      <ID>Hierarchy 3</ID>
+      <Name>By Marking</Name>
+      <Levels>
+        <Level dwd:design-time-name="6dda93ac-9087-416e-b6b5-ed166e13617b">
+          <ID>Marking</ID>
+          <Name>Marking</Name>
+          <SourceAttributeID>Marking</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1d7fdeea-ff03-4c84-a086-0d4caa998d51">
+          <ID>Invoice Num</ID>
+          <Name>Invoice Num</Name>
+          <SourceAttributeID>Invoice Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching dwd:design-time-name="dc0a33f1-f16e-426d-9826-c3ab2fbd8f01">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9af3c0a4-7364-4bc2-b9bd-7c1dd02e54ea" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

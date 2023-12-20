@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+html {
+  font-size: 14px;
+}
+
+
+body, html {
+    height: 100%;
+    font-family: SourceSansPro-Regular,sans-serif !important;
+    background-color: #EEF2F5;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.body-Login {
+    height: 100%;
+    font-family: SourceSansPro-Regular,sans-serif !important;
+    background-color: #025064;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.Head-TR {
+    background-color: #C1E4F7;
+}
+
+.Menu-Header {
+    color: white;
+    background-color: #025064;
+}
+
+.btn-primary {
+    background-color: #025064;
+}
+
+.ahref-button {
+    color: #172C51;
+}
